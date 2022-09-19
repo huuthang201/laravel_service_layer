@@ -48,3 +48,7 @@ Route::post('post', 'PostController@store');
 Route::match(['put', 'patch'], 'post/{id}', 'PostController@update');
 
 Route::delete('post/{id}', 'PostController@destroy');
+
+Route::get('/mail', function () {
+    return view('form');
+});
